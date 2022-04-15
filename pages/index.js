@@ -16,7 +16,6 @@ export default function Index({ posts, globalData }) {
             <main className="w-full">
                 <h1 className="text-3xl lg:text-5xl text-center mb-12">{globalData.blogTitle}</h1>
                 <div className="grid md:grid-cols-3 lg:-mx-24 mt-12">
-                    <div className="w-full">
                         {posts.map((post) => (
                             <div
                                 key={post.filePath}
@@ -43,7 +42,6 @@ export default function Index({ posts, globalData }) {
                                 </Link>
                             </div>
                         ))}
-                    </div>
                 </div>
             </main>
             <Footer copyrightText={globalData.footerText} />
