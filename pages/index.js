@@ -13,9 +13,9 @@ export default function Index({ posts, globalData }) {
         <Layout>
             <SEO title={globalData.name} description={globalData.blogTitle} />
             <Header name={globalData.name} />
-            <main className="w-full">
+            <main className="w-max">
                 <h1 className="text-3xl lg:text-5xl text-center mb-12">{globalData.blogTitle}</h1>
-                <div className="grid md:grid-cols-5 w-max">
+                <div className="grid md:grid-cols-5">
                     {posts.map((post) => (
                         <div
                             key={post.filePath}
