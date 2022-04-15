@@ -15,11 +15,11 @@ export default function Index({ posts, globalData }) {
             <Header name={globalData.name} />
             <main className="w-full">
                 <h1 className="text-3xl lg:text-5xl text-center mb-12">{globalData.blogTitle}</h1>
-                <div className="grid md:grid-cols-3 lg:-mx-24 mt-12">
+                <div className="grid md:grid-cols-5 lg:-mx-24 mt-12">
                     {posts.map((post) => (
                         <div
                             key={post.filePath}
-                            className="py-8 px-10 text-center md:text-right first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg first last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none flex flex-col"
+                            className="first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg first last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none flex flex-col"
                         >
                             <Link
                                 as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
